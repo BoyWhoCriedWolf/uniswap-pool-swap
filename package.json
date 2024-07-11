@@ -1,0 +1,26 @@
+{
+  "name": "uniswap-pool-swap",
+  "version": "1.0.0",
+  "description": "uniswap swap and pool widget",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BoyWhoCriedWolf/uniswap-pool.git"
+  },
+  "keywords": [
+    "uniswap",
+    "pool",
+    "swap",
+    "widget"
+  ],
+  "author": "BoyWhoCriedWolf",
+  "license": "ISC",
+  "types": "./dist/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/BoyWhoCriedWolf/uniswap-pool/issues"
+  },
+  "homepage": "https://github.com/BoyWhoCriedWolf/uniswap-pool#readme"
+}
