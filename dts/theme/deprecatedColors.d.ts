@@ -1,0 +1,36 @@
+export declare const lightDeprecatedTheme: {
+    deprecated_yellow1: string;
+    deprecated_yellow2: string;
+    deprecated_yellow3: string;
+    deprecated_blue4: string;
+    deprecated_backgroundScrolledSurface: string;
+    deprecated_accentWarning: string;
+    deprecated_accentWarningSoft: string;
+    deprecated_accentFailureSoft: string;
+    deprecated_accentTextLightPrimary: string;
+    deprecated_deepShadow: string;
+    deprecated_shallowShadow: string;
+    deprecated_networkDefaultShadow: string;
+    deprecated_stateOverlayHover: string;
+    deprecated_stateOverlayPressed: string;
+    deprecated_hoverState: string;
+    deprecated_hoverDefault: string;
+};
+export declare const darkDeprecatedTheme: {
+    deprecated_yellow1: string;
+    deprecated_yellow2: string;
+    deprecated_yellow3: string;
+    deprecated_blue4: string;
+    deprecated_backgroundScrolledSurface: string;
+    deprecated_accentWarning: string;
+    deprecated_accentWarningSoft: string;
+    deprecated_accentFailureSoft: string;
+    deprecated_accentTextLightPrimary: string;
+    deprecated_deepShadow: string;
+    deprecated_shallowShadow: string;
+    deprecated_networkDefaultShadow: string;
+    deprecated_stateOverlayHover: string;
+    deprecated_stateOverlayPressed: string;
+    deprecated_hoverState: string;
+    deprecated_hoverDefault: string;
+};

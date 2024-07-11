@@ -1,0 +1,21 @@
+/// <reference types="react" />
+type SVGProps = React.SVGProps<SVGSVGElement>;
+export declare const USD_ICON: (props: SVGProps) => JSX.Element;
+export declare const EUR_ICON: (props: SVGProps) => JSX.Element;
+export declare const RUB_ICON: (props: SVGProps) => JSX.Element;
+export declare const INR_ICON: (props: SVGProps) => JSX.Element;
+export declare const GBP_ICON: (props: SVGProps) => JSX.Element;
+export declare const JPY_ICON: (props: SVGProps) => JSX.Element;
+export declare const VND_ICON: (props: SVGProps) => JSX.Element;
+export declare const SGD_ICON: (props: SVGProps) => JSX.Element;
+export declare const BRL_ICON: (props: SVGProps) => JSX.Element;
+export declare const HKD_ICON: (props: SVGProps) => JSX.Element;
+export declare const CAD_ICON: (props: SVGProps) => JSX.Element;
+export declare const IDR_ICON: (props: SVGProps) => JSX.Element;
+export declare const TRY_ICON: (props: SVGProps) => JSX.Element;
+export declare const NGN_ICON: (props: SVGProps) => JSX.Element;
+export declare const AUD_ICON: (props: SVGProps) => JSX.Element;
+export declare const PKR_ICON: (props: SVGProps) => JSX.Element;
+export declare const UAH_ICON: (props: SVGProps) => JSX.Element;
+export declare const THB_ICON: (props: SVGProps) => JSX.Element;
+export {};

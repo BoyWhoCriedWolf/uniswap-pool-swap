@@ -1,0 +1,23 @@
+import { Contract } from "@ethersproject/contracts";
+import { ArgentWalletDetector, EnsPublicResolver, EnsRegistrar, Erc20, Erc721, Erc1155, Weth } from "abis/types";
+import { NonfungiblePositionManager, TickLens, UniswapInterfaceMulticall } from "types/v3";
+import { V3Migrator } from "types/v3/V3Migrator";
+export declare function useContract<T extends Contract = Contract>(addressOrAddressMap: string | {
+    [chainId: number]: string;
+} | undefined, ABI: any, withSignerIfPossible?: boolean): T | null;
+export declare function useV2MigratorContract(): V3Migrator | null;
+export declare function useTokenContract(tokenAddress?: string, withSignerIfPossible?: boolean): Erc20 | null;
+export declare function useWETHContract(withSignerIfPossible?: boolean): Weth | null;
+export declare function useERC721Contract(nftAddress?: string): Erc721 | null;
+export declare function useERC1155Contract(nftAddress?: string): Erc1155 | null;
+export declare function useArgentWalletDetectorContract(): ArgentWalletDetector | null;
+export declare function useENSRegistrarContract(): EnsRegistrar | null;
+export declare function useENSResolverContract(address: string | undefined): EnsPublicResolver | null;
+export declare function useBytes32TokenContract(tokenAddress?: string, withSignerIfPossible?: boolean): Contract | null;
+export declare function useEIP2612Contract(tokenAddress?: string): Contract | null;
+export declare function usePairContract(pairAddress?: string, withSignerIfPossible?: boolean): Contract | null;
+export declare function useV2RouterContract(): Contract | null;
+export declare function useInterfaceMulticall(): UniswapInterfaceMulticall;
+export declare function useMainnetInterfaceMulticall(): UniswapInterfaceMulticall;
+export declare function useV3NFTPositionManagerContract(withSignerIfPossible?: boolean): NonfungiblePositionManager | null;
+export declare function useTickLens(): TickLens | null;
