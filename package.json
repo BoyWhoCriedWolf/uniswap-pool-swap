@@ -1,6 +1,6 @@
 {
   "name": "uniswap-pool-swap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "uniswap swap and pool widget",
   "main": "dist/cjs/index.cjs",
   "module": "dist/index.js",
