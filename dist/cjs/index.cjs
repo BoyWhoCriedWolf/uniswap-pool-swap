@@ -2,7 +2,7 @@
 
 require('react');
 require('@reach/dialog/styles.css');
-var index = require('./index-620446e3.cjs');
+var index = require('./index-cf5dcfc1.cjs');
 require('inter-ui');
 require('@apollo/client');
 require('react-query');
@@ -27,7 +27,6 @@ require('polyfill-object.fromentries');
 require('@juggle/resize-observer');
 require('array.prototype.flat');
 require('array.prototype.flatmap');
-require('buffer');
 require('@sentry/react');
 require('@sentry/tracing');
 require('@uniswap/analytics-events');
@@ -108,3 +107,4 @@ require('png-ts');
 
 
 module.exports = index.UniswapWidget;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguY2pzIiwic291cmNlcyI6W10sInNvdXJjZXNDb250ZW50IjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OyJ9

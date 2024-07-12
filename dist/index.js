@@ -1,6 +1,6 @@
 import 'react';
 import '@reach/dialog/styles.css';
-export { bm as default } from './index-c65bddcf.js';
+export { bm as default } from './index-916d1b2a.js';
 import 'inter-ui';
 import '@apollo/client';
 import 'react-query';
@@ -25,7 +25,6 @@ import 'polyfill-object.fromentries';
 import '@juggle/resize-observer';
 import 'array.prototype.flat';
 import 'array.prototype.flatmap';
-import 'buffer';
 import '@sentry/react';
 import '@sentry/tracing';
 import '@uniswap/analytics-events';
@@ -102,3 +101,4 @@ import 'web-vitals';
 import 'd3';
 import 'jpeg-js';
 import 'png-ts';
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VzIjpbXSwic291cmNlc0NvbnRlbnQiOltdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7In0=
