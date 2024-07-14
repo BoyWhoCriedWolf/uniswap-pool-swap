@@ -1,0 +1,10 @@
+import { Connector } from "@web3-react/types";
+import { Connection, ConnectionType } from "./types";
+export declare const networkConnection: Connection;
+export declare const deprecatedNetworkConnection: Connection;
+export declare const injectedConnection: Connection;
+export declare const gnosisSafeConnection: Connection;
+export declare const walletConnectV2Connection: Connection;
+export declare const uniwalletWCV2ConnectConnection: Connection;
+export declare const connections: Connection[];
+export declare function getConnection(c: Connector | ConnectionType): Connection;
