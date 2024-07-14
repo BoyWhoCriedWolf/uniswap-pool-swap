@@ -13,7 +13,7 @@ var index$2 = require('../../components/Button/index.cjs');
 var index = require('../../components/Column/index.cjs');
 var index$7 = require('../../components/PositionList/index.cjs');
 var index$1 = require('../../components/Row/index.cjs');
-var index$9 = require('../../components/SwitchLocaleLink/index.cjs');
+var index$8 = require('../../components/SwitchLocaleLink/index.cjs');
 var chains = require('../../constants/chains.cjs');
 var useFilterPossiblyMaliciousPositions = require('../../hooks/useFilterPossiblyMaliciousPositions.cjs');
 var useV3Positions = require('../../hooks/useV3Positions.cjs');
@@ -21,8 +21,7 @@ var index$5 = require('../AddLiquidity/index.cjs');
 var reactFeather = require('react-feather');
 var hooks = require('../../state/user/hooks.cjs');
 var styled = require('styled-components');
-var index$8 = require('../../theme/components/index.cjs');
-var CTACards = require('./CTACards.cjs');
+require('../../theme/components/index.cjs');
 var PositionLoadingPlaceHolder = require('./PositionLoadingPlaceHolder.cjs');
 var WrongNetworkCard = require('./WrongNetworkCard.cjs');
 var text = require('../../theme/components/text.cjs');
@@ -195,7 +194,7 @@ function Pool() {
   }, /*#__PURE__*/React__default["default"].createElement(index$6.Trans, {
     id: "GdzYJ9",
     message: "Connect a wallet"
-  }))))), /*#__PURE__*/React__default["default"].createElement(index$8.HideSmall, null, /*#__PURE__*/React__default["default"].createElement(CTACards, null))))), /*#__PURE__*/React__default["default"].createElement(index$9.SwitchLocaleLink, null));
+  })))))))), /*#__PURE__*/React__default["default"].createElement(index$8.SwitchLocaleLink, null));
 }
 
 module.exports = Pool;

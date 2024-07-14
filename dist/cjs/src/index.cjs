@@ -11,12 +11,14 @@ var index$1 = require('./featureFlags/index.cjs');
 var apollo = require('./graphql/data/apollo.cjs');
 var useBlockNumber = require('./lib/hooks/useBlockNumber.cjs');
 var multicall = require('./lib/state/multicall.cjs');
+var client = require('react-dom/client');
 var reactQuery = require('react-query');
 var reactRedux = require('react-redux');
 var ThemeToggle = require('./theme/components/ThemeToggle.cjs');
 var index$2 = require('./components/Web3Provider/index.cjs');
 var i18n = require('./i18n.cjs');
 var App = require('./pages/App.cjs');
+var serviceWorkerRegistration = require('./serviceWorkerRegistration.cjs');
 var index = require('./state/index.cjs');
 var updater$1 = require('./state/application/updater.cjs');
 var updater = require('./state/lists/updater.cjs');
@@ -49,13 +51,10 @@ function UniswapWidget() {
     client: apollo.apolloClient
   }, /*#__PURE__*/React__default["default"].createElement(useBlockNumber.BlockNumberProvider, null, /*#__PURE__*/React__default["default"].createElement(Updaters, null), /*#__PURE__*/React__default["default"].createElement(index$3["default"], null, /*#__PURE__*/React__default["default"].createElement(index$3.ThemedGlobalStyle, null), /*#__PURE__*/React__default["default"].createElement(App, null))))))))));
 }
-
-// const container = document.getElementById("root") as HTMLElement;
-
-// createRoot(container).render(<UniswapWidget />);
-
-// if (process.env.REACT_APP_SERVICE_WORKER !== "false") {
-//   serviceWorkerRegistration.register();
-// }
+var container = document.getElementById("root");
+client.createRoot(container).render( /*#__PURE__*/React__default["default"].createElement(UniswapWidget, null));
+if (process.env.REACT_APP_SERVICE_WORKER !== "false") {
+  serviceWorkerRegistration.register();
+}
 
 module.exports = UniswapWidget;

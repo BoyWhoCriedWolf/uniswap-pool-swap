@@ -9,12 +9,14 @@ import { FeatureFlagsProvider } from './featureFlags/index.js';
 import { apolloClient } from './graphql/data/apollo.js';
 import { BlockNumberProvider } from './lib/hooks/useBlockNumber.js';
 import { MulticallUpdater } from './lib/state/multicall.js';
+import { createRoot } from 'react-dom/client';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Provider } from 'react-redux';
 import { SystemThemeUpdater, ThemeColorMetaUpdater } from './theme/components/ThemeToggle.js';
 import Web3Provider from './components/Web3Provider/index.js';
 import { LanguageProvider } from './i18n.js';
 import App from './pages/App.js';
+import { register } from './serviceWorkerRegistration.js';
 import store from './state/index.js';
 import Updater$1 from './state/application/updater.js';
 import Updater from './state/lists/updater.js';
@@ -43,13 +45,10 @@ function UniswapWidget() {
     client: apolloClient
   }, /*#__PURE__*/React__default.createElement(BlockNumberProvider, null, /*#__PURE__*/React__default.createElement(Updaters, null), /*#__PURE__*/React__default.createElement(ThemeProvider, null, /*#__PURE__*/React__default.createElement(ThemedGlobalStyle, null), /*#__PURE__*/React__default.createElement(App, null))))))))));
 }
-
-// const container = document.getElementById("root") as HTMLElement;
-
-// createRoot(container).render(<UniswapWidget />);
-
-// if (process.env.REACT_APP_SERVICE_WORKER !== "false") {
-//   serviceWorkerRegistration.register();
-// }
+const container = document.getElementById("root");
+createRoot(container).render( /*#__PURE__*/React__default.createElement(UniswapWidget, null));
+if (process.env.REACT_APP_SERVICE_WORKER !== "false") {
+  register();
+}
 
 export { UniswapWidget as default };

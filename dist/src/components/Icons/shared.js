@@ -1,25 +1,52 @@
-import _taggedTemplateLiteral from '@babel/runtime/helpers/taggedTemplateLiteral';
 import styled, { keyframes, css } from 'styled-components';
 
-var _templateObject, _templateObject2, _templateObject3, _templateObject4;
-var rotateAnimation = keyframes(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n"])));
-var RotationStyle = css(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  animation: 2s ", " linear infinite;\n"])), rotateAnimation);
-var StyledSVG = styled.svg(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  height: ", ";\n  width: ", ";\n  path {\n    stroke: ", ";\n    background: ", ";\n    fill: ", ";\n  }\n"])), function (_ref) {
-  var size = _ref.size;
+const rotateAnimation = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+const RotationStyle = css`
+  animation: 2s ${rotateAnimation} linear infinite;
+`;
+const StyledSVG = styled.svg`
+  height: ${_ref => {
+  let {
+    size
+  } = _ref;
   return size;
-}, function (_ref2) {
-  var size = _ref2.size;
+}};
+  width: ${_ref2 => {
+  let {
+    size
+  } = _ref2;
   return size;
-}, function (_ref3) {
-  var stroke = _ref3.stroke;
+}};
+  path {
+    stroke: ${_ref3 => {
+  let {
+    stroke
+  } = _ref3;
   return stroke;
-}, function (_ref4) {
-  var theme = _ref4.theme;
+}};
+    background: ${_ref4 => {
+  let {
+    theme
+  } = _ref4;
   return theme.neutral2;
-}, function (_ref5) {
-  var fill = _ref5.fill;
+}};
+    fill: ${_ref5 => {
+  let {
+    fill
+  } = _ref5;
   return fill;
-});
-var StyledRotatingSVG = styled(StyledSVG)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  ", "\n"])), RotationStyle);
+}};
+  }
+`;
+const StyledRotatingSVG = styled(StyledSVG)`
+  ${RotationStyle}
+`;
 
 export { StyledRotatingSVG, StyledSVG };
