@@ -1,4 +1,4 @@
-var SlippageTolerance = /*#__PURE__*/function (SlippageTolerance) {
+let SlippageTolerance = /*#__PURE__*/function (SlippageTolerance) {
   SlippageTolerance["Auto"] = "auto";
   return SlippageTolerance;
 }({});

@@ -1,6 +1,5 @@
 import { BigNumber } from '@ethersproject/bignumber';
 import '@ethersproject/units';
-import '@babel/runtime/helpers/defineProperty';
 import '@uniswap/sdk-core';
 import '@web3-react/core';
 import '../../constants/chainInfo.js';
@@ -26,6 +25,7 @@ import '@babel/runtime/helpers/possibleConstructorReturn';
 import '@babel/runtime/helpers/getPrototypeOf';
 import '@babel/runtime/helpers/inherits';
 import '@babel/runtime/helpers/slicedToArray';
+import '@babel/runtime/helpers/defineProperty';
 import '../../utils/listSort.js';
 import '../../hooks/useStablecoinPrice.js';
 import 'jsbi';
