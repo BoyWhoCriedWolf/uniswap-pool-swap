@@ -13,7 +13,7 @@ export declare const ButtonRow: import("styled-components").StyledComponent<impo
     gap?: string | undefined;
 }, never>;
 export declare const StyledXButton: import("styled-components").StyledComponent<import("react-feather").Icon, import("styled-components").DefaultTheme, {}, never>;
-export declare const BannerButton: import("styled-components").StyledComponent<import("react").FunctionComponent<import("rebass").ButtonProps>, import("styled-components").DefaultTheme, {
+export declare const BannerButton: import("styled-components").StyledComponent<"button", import("styled-components").DefaultTheme, {
     padding?: string | undefined;
     width?: string | undefined;
     $borderRadius?: string | undefined;

@@ -9,49 +9,49 @@ type BaseButtonProps = {
     $borderRadius?: string;
     altDisabledStyle?: boolean;
 } & ButtonProps;
-export declare const BaseButton: import("styled-components").StyledComponent<import("react").FunctionComponent<ButtonPropsOriginal>, DefaultTheme, {
+export declare const BaseButton: import("styled-components").StyledComponent<"button", DefaultTheme, {
     padding?: string | undefined;
     width?: string | undefined;
     $borderRadius?: string | undefined;
     altDisabledStyle?: boolean | undefined;
 } & ButtonProps, never>;
-export declare const ButtonPrimary: import("styled-components").StyledComponent<import("react").FunctionComponent<ButtonPropsOriginal>, DefaultTheme, {
+export declare const ButtonPrimary: import("styled-components").StyledComponent<"button", DefaultTheme, {
     padding?: string | undefined;
     width?: string | undefined;
     $borderRadius?: string | undefined;
     altDisabledStyle?: boolean | undefined;
 } & ButtonProps, never>;
-export declare const SmallButtonPrimary: import("styled-components").StyledComponent<import("react").FunctionComponent<ButtonPropsOriginal>, DefaultTheme, {
+export declare const SmallButtonPrimary: import("styled-components").StyledComponent<"button", DefaultTheme, {
     padding?: string | undefined;
     width?: string | undefined;
     $borderRadius?: string | undefined;
     altDisabledStyle?: boolean | undefined;
 } & ButtonProps, never>;
-export declare const ButtonGray: import("styled-components").StyledComponent<import("react").FunctionComponent<ButtonPropsOriginal>, DefaultTheme, {
+export declare const ButtonGray: import("styled-components").StyledComponent<"button", DefaultTheme, {
     padding?: string | undefined;
     width?: string | undefined;
     $borderRadius?: string | undefined;
     altDisabledStyle?: boolean | undefined;
 } & ButtonProps, never>;
-export declare const ButtonSecondary: import("styled-components").StyledComponent<import("react").FunctionComponent<ButtonPropsOriginal>, DefaultTheme, {
+export declare const ButtonSecondary: import("styled-components").StyledComponent<"button", DefaultTheme, {
     padding?: string | undefined;
     width?: string | undefined;
     $borderRadius?: string | undefined;
     altDisabledStyle?: boolean | undefined;
 } & ButtonProps, never>;
-export declare const ButtonOutlined: import("styled-components").StyledComponent<import("react").FunctionComponent<ButtonPropsOriginal>, DefaultTheme, {
+export declare const ButtonOutlined: import("styled-components").StyledComponent<"button", DefaultTheme, {
     padding?: string | undefined;
     width?: string | undefined;
     $borderRadius?: string | undefined;
     altDisabledStyle?: boolean | undefined;
 } & ButtonProps, never>;
-export declare const ButtonEmpty: import("styled-components").StyledComponent<import("react").FunctionComponent<ButtonPropsOriginal>, DefaultTheme, {
+export declare const ButtonEmpty: import("styled-components").StyledComponent<"button", DefaultTheme, {
     padding?: string | undefined;
     width?: string | undefined;
     $borderRadius?: string | undefined;
     altDisabledStyle?: boolean | undefined;
 } & ButtonProps, never>;
-export declare const ButtonText: import("styled-components").StyledComponent<import("react").FunctionComponent<ButtonPropsOriginal>, DefaultTheme, {
+export declare const ButtonText: import("styled-components").StyledComponent<"button", DefaultTheme, {
     padding?: string | undefined;
     width?: string | undefined;
     $borderRadius?: string | undefined;

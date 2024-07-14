@@ -1,6 +1,6 @@
 import 'react';
 import '@reach/dialog/styles.css';
-export { bg as default } from './index-d605823c.js';
+export { bg as default } from './index-2b67afdc.js';
 import 'inter-ui';
 import '@apollo/client';
 import 'react-dom/client';
