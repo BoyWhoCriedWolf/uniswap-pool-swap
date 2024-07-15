@@ -2,7 +2,7 @@
 
 require('react');
 require('@reach/dialog/styles.css');
-var index = require('./index-a288afe5.cjs');
+var index = require('./index-9d35a798.cjs');
 require('inter-ui');
 require('@apollo/client');
 require('react-dom/client');
