@@ -1,2 +1,2 @@
-import { ArgentWalletContract } from "../abis/types";
+import { ArgentWalletContract } from 'abis/types';
 export declare function useArgentWalletContract(): ArgentWalletContract | null;

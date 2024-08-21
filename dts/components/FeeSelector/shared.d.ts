@@ -1,8 +1,7 @@
-import { ChainId } from "@uniswap/sdk-core";
-import { FeeAmount } from "@uniswap/v3-sdk";
-import type { ReactNode } from "react";
+import { ChainId } from '@uniswap/sdk-core';
+import { FeeAmount } from '@uniswap/v3-sdk';
 export declare const FEE_AMOUNT_DETAIL: Record<FeeAmount, {
     label: string;
-    description: ReactNode;
+    description: string;
     supportedChains: readonly ChainId[];
 }>;

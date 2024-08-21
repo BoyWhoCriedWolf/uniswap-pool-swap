@@ -1,5 +1,6 @@
-import { PermitSingle } from "@uniswap/permit2-sdk";
-import { CurrencyAmount, Token } from "@uniswap/sdk-core";
+import { PermitSingle } from '@uniswap/permit2-sdk';
+import { CurrencyAmount, Token } from '@uniswap/sdk-core';
+import { WidgetError, WidgetPromise } from 'errors';
 export declare function usePermitAllowance(token?: Token, owner?: string, spender?: string): {
     permitAllowance: CurrencyAmount<Token> | undefined;
     expiration: number | undefined;
@@ -11,5 +12,5 @@ interface Permit extends PermitSingle {
 export interface PermitSignature extends Permit {
     signature: string;
 }
-export declare function useUpdatePermitAllowance(token: Token | undefined, spender: string | undefined, nonce: number | undefined, onPermitSignature: (signature: PermitSignature) => void): () => Promise<void>;
+export declare function useUpdatePermitAllowance(token: Token | undefined, spender: string | undefined, nonce: number | undefined, onPermitSignature: (signature: PermitSignature) => void): () => WidgetPromise<void, WidgetError & import("errors").UnknownError>;
 export {};

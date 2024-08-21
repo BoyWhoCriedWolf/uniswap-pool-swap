@@ -1,5 +1,5 @@
-import { FeeAmount } from "@uniswap/v3-sdk";
-import { ReactNode } from "react";
+import { FeeAmount } from '@uniswap/v3-sdk';
+import { ReactNode } from 'react';
 interface StepCounterProps {
     value: string;
     onUserInput: (value: string) => void;
@@ -15,5 +15,5 @@ interface StepCounterProps {
     tokenA?: string;
     tokenB?: string;
 }
-declare const StepCounter: ({ value, decrement, increment, decrementDisabled, incrementDisabled, width, locked, onUserInput, title, tokenA, tokenB, }: StepCounterProps) => JSX.Element;
+declare function StepCounter({ value, decrement, increment, decrementDisabled, incrementDisabled, width, locked, onUserInput, title, tokenA, tokenB, }: StepCounterProps): JSX.Element;
 export default StepCounter;

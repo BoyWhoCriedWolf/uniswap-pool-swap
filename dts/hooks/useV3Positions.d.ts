@@ -1,5 +1,5 @@
-import { BigNumber } from "@ethersproject/bignumber";
-import { PositionDetails } from "types/position";
+import { BigNumber } from '@ethersproject/bignumber';
+import { PositionDetails } from 'types/position';
 interface UseV3PositionsResults {
     loading: boolean;
     positions?: PositionDetails[];

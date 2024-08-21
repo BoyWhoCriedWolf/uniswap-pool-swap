@@ -1,10 +1,18 @@
-import { Currency, CurrencyAmount, Percent, Price, Token } from "@uniswap/sdk-core";
-import { SupportedLocalCurrency } from "constants/localCurrencies";
-import { SupportedLocale } from "constants/locales";
-import { Bound } from "state/mint/v3/actions";
-type Nullish<T> = T | null | undefined;
-type NumberFormatOptions = Intl.NumberFormatOptions;
-type HardCodedInputFormat = {
+import { Currency, CurrencyAmount, Percent, Price, Token } from '@uniswap/sdk-core';
+import { SupportedLocale } from 'constants/locales';
+import { SupportedLocalCurrency } from '../constants/localCurrencies';
+export declare function currencyAmountToPreciseFloat(currencyAmount: CurrencyAmount<Currency> | undefined): number | undefined;
+export declare function priceToPreciseFloat(price: Price<Currency, Currency> | undefined): number | undefined;
+interface FormatDollarArgs {
+    num: number | undefined | null;
+    lessPreciseStablecoinValues?: boolean;
+}
+export declare function formatDollar({ num, lessPreciseStablecoinValues }: FormatDollarArgs): string;
+export declare function formatTransactionAmount(num: number | undefined | null, maxDigits?: number): string;
+declare type Nullish<T> = T | null | undefined;
+declare type NumberFormatOptions = Intl.NumberFormatOptions;
+declare type FormatterType = NumberType | FormatterRule[];
+declare type HardCodedInputFormat = {
     input: number;
     prefix?: string;
     hardcodedOutput?: undefined;
@@ -13,18 +21,18 @@ type HardCodedInputFormat = {
     prefix?: undefined;
     hardcodedOutput: string;
 };
-type FormatterBaseRule = {
+declare type FormatterBaseRule = {
     formatterOptions: NumberFormatOptions;
 };
-type FormatterExactRule = {
+declare type FormatterExactRule = {
     upperBound?: undefined;
     exact: number;
 } & FormatterBaseRule;
-type FormatterUpperBoundRule = {
+declare type FormatterUpperBoundRule = {
     upperBound: number;
     exact?: undefined;
 } & FormatterBaseRule;
-type FormatterRule = (FormatterExactRule | FormatterUpperBoundRule) & {
+declare type FormatterRule = (FormatterExactRule | FormatterUpperBoundRule) & {
     hardCodedInput?: HardCodedInputFormat;
 };
 export declare enum NumberType {
@@ -43,17 +51,8 @@ export declare enum NumberType {
     NFTCollectionStats = "nft-collection-stats",
     NFTTokenFloorPriceTrailingZeros = "nft-token-floor-price-trailing-zeros"
 }
-type FormatterType = NumberType | FormatterRule[];
 interface FormatNumberOptions {
     input: Nullish<number>;
-    type?: FormatterType;
-    placeholder?: string;
-    locale?: SupportedLocale;
-    localCurrency?: SupportedLocalCurrency;
-    conversionRate?: number;
-}
-interface FormatCurrencyAmountOptions {
-    amount: Nullish<CurrencyAmount<Currency>>;
     type?: FormatterType;
     placeholder?: string;
     locale?: SupportedLocale;
@@ -67,6 +66,10 @@ interface FormatPriceOptions {
     localCurrency?: SupportedLocalCurrency;
     conversionRate?: number;
 }
+export declare enum Bound {
+    LOWER = "LOWER",
+    UPPER = "UPPER"
+}
 interface FormatTickPriceOptions {
     price?: Price<Token, Token>;
     atLimit: {
@@ -75,6 +78,26 @@ interface FormatTickPriceOptions {
     direction: Bound;
     placeholder?: string;
     numberType?: NumberType;
+    locale?: SupportedLocale;
+    localCurrency?: SupportedLocalCurrency;
+    conversionRate?: number;
+}
+export declare function formatTickPrice({ price, atLimit, direction, placeholder, numberType, locale, localCurrency, conversionRate, }: FormatTickPriceOptions): string;
+export declare function useFormatterLocales(): {
+    formatterLocale: SupportedLocale;
+    formatterLocalCurrency: SupportedLocalCurrency;
+};
+interface FormatCurrencyAmountOptions {
+    amount: Nullish<CurrencyAmount<Currency>>;
+    type?: FormatterType;
+    placeholder?: string;
+    locale?: SupportedLocale;
+    localCurrency?: SupportedLocalCurrency;
+    conversionRate?: number;
+}
+interface FormatNumberOrStringOptions {
+    input: Nullish<number | string>;
+    type: FormatterType;
     locale?: SupportedLocale;
     localCurrency?: SupportedLocalCurrency;
     conversionRate?: number;
@@ -93,10 +116,6 @@ interface FormatFiatPriceOptions {
     localCurrency?: SupportedLocalCurrency;
     conversionRate?: number;
 }
-export declare function useFormatterLocales(): {
-    formatterLocale: SupportedLocale;
-    formatterLocalCurrency: SupportedLocalCurrency;
-};
 export declare function useFormatter(): {
     formatCurrencyAmount: (options: Omit<FormatCurrencyAmountOptions, "locale" | "localCurrency" | "conversionRate">) => string;
     formatFiatPrice: (options: Omit<FormatFiatPriceOptions, "locale" | "localCurrency" | "conversionRate">) => string;

@@ -1,6 +1,6 @@
-import { JsonRpcProvider } from "@ethersproject/providers";
-import { SupportedInterfaceChain } from "constants/chains";
-import AppStaticJsonRpcProvider from "./StaticJsonRpcProvider";
+import { JsonRpcProvider } from '@ethersproject/providers';
+import { SupportedInterfaceChain } from 'constants/chains';
+import AppStaticJsonRpcProvider from './StaticJsonRpcProvider';
 interface ProviderPerformance {
     callCount: number;
     latency: number;

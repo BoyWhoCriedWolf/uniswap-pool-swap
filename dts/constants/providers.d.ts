@@ -1,6 +1,6 @@
-import AppStaticJsonRpcProvider from "rpc/StaticJsonRpcProvider";
-import StaticJsonRpcProvider from "rpc/StaticJsonRpcProvider";
-import { SupportedInterfaceChain } from "./chains";
+import AppStaticJsonRpcProvider from 'rpc/StaticJsonRpcProvider';
+import StaticJsonRpcProvider from 'rpc/StaticJsonRpcProvider';
+import { SupportedInterfaceChain } from './chains';
 /**
  * These are the only JsonRpcProviders used directly by the interface.
  */

@@ -1,44 +1,59 @@
-import { ChainId, SupportedChainsType } from "@uniswap/sdk-core";
-export declare const CHAIN_IDS_TO_NAMES: {
-    readonly 1: "mainnet";
-    readonly 5: "goerli";
-    readonly 11155111: "sepolia";
-    readonly 137: "polygon";
-    readonly 80001: "polygon_mumbai";
-    readonly 42220: "celo";
-    readonly 44787: "celo_alfajores";
-    readonly 42161: "arbitrum";
-    readonly 421613: "arbitrum_goerli";
-    readonly 10: "optimism";
-    readonly 420: "optimism_goerli";
-    readonly 56: "bnb";
-    readonly 43114: "avalanche";
-    readonly 8453: "base";
-};
-export type SupportedInterfaceChain = Exclude<SupportedChainsType, ChainId.BASE_GOERLI>;
-export declare function isSupportedChain(chainId: number | null | undefined | ChainId, featureFlags?: Record<number, boolean>): chainId is SupportedInterfaceChain;
-export declare function asSupportedChain(chainId: number | null | undefined | ChainId, featureFlags?: Record<number, boolean>): SupportedInterfaceChain | undefined;
-export declare const SUPPORTED_GAS_ESTIMATE_CHAIN_IDS: readonly [ChainId.MAINNET, ChainId.POLYGON, ChainId.CELO, ChainId.OPTIMISM, ChainId.ARBITRUM_ONE, ChainId.BNB, ChainId.AVALANCHE, ChainId.BASE];
 /**
- * Supported networks for V2 pool behavior.
+ * List of all the networks supported by the Uniswap Interface
  */
-export declare const SUPPORTED_V2POOL_CHAIN_IDS: readonly [ChainId.MAINNET, ChainId.GOERLI];
-export declare const TESTNET_CHAIN_IDS: readonly [ChainId.GOERLI, ChainId.SEPOLIA, ChainId.POLYGON_MUMBAI, ChainId.ARBITRUM_GOERLI, ChainId.OPTIMISM_GOERLI, ChainId.CELO_ALFAJORES];
+export declare enum SupportedChainId {
+    MAINNET = 1,
+    ROPSTEN = 3,
+    RINKEBY = 4,
+    GOERLI = 5,
+    KOVAN = 42,
+    ARBITRUM_ONE = 42161,
+    ARBITRUM_RINKEBY = 421611,
+    OPTIMISM = 10,
+    OPTIMISM_GOERLI = 420,
+    POLYGON = 137,
+    POLYGON_MUMBAI = 80001,
+    CELO = 42220,
+    CELO_ALFAJORES = 44787,
+    BNB = 56,
+    BASE = 8453,
+    COSTON2 = 114
+}
+export declare enum ChainName {
+    MAINNET = "mainnet",
+    ROPSTEN = "ropsten",
+    RINKEBY = "rinkeby",
+    GOERLI = "goerli",
+    KOVAN = "kovan",
+    OPTIMISM = "optimism-mainnet",
+    OPTIMISM_GOERLI = "optimism-goerli",
+    ARBITRUM_ONE = "arbitrum-mainnet",
+    ARBITRUM_RINKEBY = "arbitrum-rinkeby",
+    POLYGON = "polygon-mainnet",
+    POLYGON_MUMBAI = "polygon-mumbai",
+    CELO = "celo",
+    CELO_ALFAJORES = "celo-alfajores",
+    BNB = "bnb",
+    BASE = "base",
+    COSTON2 = "coston2"
+}
+export declare const CHAIN_NAMES_TO_IDS: {
+    [chainName: string]: SupportedChainId;
+};
+/**
+ * Array of all the supported chain IDs
+ */
+export declare const ALL_SUPPORTED_CHAIN_IDS: SupportedChainId[];
+export declare const SUPPORTED_GAS_ESTIMATE_CHAIN_IDS: SupportedChainId[];
 /**
  * All the chain IDs that are running the Ethereum protocol.
  */
-export declare const L1_CHAIN_IDS: readonly [ChainId.MAINNET, ChainId.GOERLI, ChainId.SEPOLIA, ChainId.POLYGON, ChainId.POLYGON_MUMBAI, ChainId.CELO, ChainId.CELO_ALFAJORES, ChainId.BNB, ChainId.AVALANCHE];
-export type SupportedL1ChainId = (typeof L1_CHAIN_IDS)[number];
+export declare const L1_CHAIN_IDS: readonly [SupportedChainId.MAINNET, SupportedChainId.ROPSTEN, SupportedChainId.RINKEBY, SupportedChainId.GOERLI, SupportedChainId.KOVAN, SupportedChainId.POLYGON, SupportedChainId.POLYGON_MUMBAI, SupportedChainId.CELO, SupportedChainId.CELO_ALFAJORES, SupportedChainId.COSTON2];
+export declare type SupportedL1ChainId = typeof L1_CHAIN_IDS[number];
 /**
  * Controls some L2 specific behavior, e.g. slippage tolerance, special UI behavior.
  * The expectation is that all of these networks have immediate transaction confirmation.
  */
-export declare const L2_CHAIN_IDS: readonly [ChainId.ARBITRUM_ONE, ChainId.ARBITRUM_GOERLI, ChainId.OPTIMISM, ChainId.OPTIMISM_GOERLI, ChainId.BASE];
-export type SupportedL2ChainId = (typeof L2_CHAIN_IDS)[number];
-/**
- * Get the priority of a chainId based on its relevance to the user.
- * @param {ChainId} chainId - The chainId to determine the priority for.
- * @returns {number} The priority of the chainId, the lower the priority, the earlier it should be displayed, with base of MAINNET=0.
- */
-export declare function getChainPriority(chainId: ChainId): number;
-export declare function isUniswapXSupportedChain(chainId: number): boolean;
+export declare const L2_CHAIN_IDS: readonly [SupportedChainId.ARBITRUM_ONE, SupportedChainId.ARBITRUM_RINKEBY, SupportedChainId.OPTIMISM, SupportedChainId.OPTIMISM_GOERLI, SupportedChainId.BASE];
+export declare type SupportedL2ChainId = typeof L2_CHAIN_IDS[number];
+export declare function isPolygonChain(chainId: number): chainId is SupportedChainId.POLYGON | SupportedChainId.POLYGON_MUMBAI;

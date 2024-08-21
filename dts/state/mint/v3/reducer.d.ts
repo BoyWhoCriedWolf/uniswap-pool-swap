@@ -1,5 +1,5 @@
-import { Field } from "./actions";
-export type FullRange = true;
+import { Field } from './actions';
+export declare type FullRange = true;
 export interface MintState {
     readonly independentField: Field;
     readonly typedValue: string;

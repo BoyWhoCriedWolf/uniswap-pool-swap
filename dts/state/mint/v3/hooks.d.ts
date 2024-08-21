@@ -1,10 +1,10 @@
-import { Currency, CurrencyAmount, Price, Token } from "@uniswap/sdk-core";
-import { FeeAmount, Pool, Position } from "@uniswap/v3-sdk";
-import { ReactNode } from "react";
-import { PoolState } from "../../../hooks/usePools";
-import { AppState } from "../../reducer";
-import { Bound, Field } from "./actions";
-export declare function useV3MintState(): AppState["mintV3"];
+import { Currency, CurrencyAmount, Price, Token } from '@uniswap/sdk-core';
+import { FeeAmount, Pool, Position } from '@uniswap/v3-sdk';
+import { PoolState } from 'hooks/usePools';
+import { ReactNode } from 'react';
+import { AppState } from 'state';
+import { Bound, Field } from './actions';
+export declare function useV3MintState(): AppState['mintV3'];
 export declare function useV3MintActionHandlers(noLiquidity: boolean | undefined): {
     onFieldAInput: (typedValue: string) => void;
     onFieldBInput: (typedValue: string) => void;

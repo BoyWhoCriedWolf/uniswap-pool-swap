@@ -1,7 +1,7 @@
 /// <reference types="react" />
-import { BigNumber } from "@ethersproject/bignumber";
-import { Price, Token } from "@uniswap/sdk-core";
-import { Position } from "@uniswap/v3-sdk";
+import { BigNumber } from '@ethersproject/bignumber';
+import { Price, Token } from '@uniswap/sdk-core';
+import { Position } from '@uniswap/v3-sdk';
 interface PositionListItemProps {
     token0: string;
     token1: string;
@@ -10,6 +10,8 @@ interface PositionListItemProps {
     liquidity: BigNumber;
     tickLower: number;
     tickUpper: number;
+    onOpen?: () => void;
+    onDelete?: () => void;
 }
 export declare function getPriceOrderingFromPositionForUI(position?: Position): {
     priceLower?: Price<Token, Token>;
@@ -17,5 +19,5 @@ export declare function getPriceOrderingFromPositionForUI(position?: Position): 
     quote?: Token;
     base?: Token;
 };
-export default function PositionListItem({ token0: token0Address, token1: token1Address, tokenId, fee: feeAmount, liquidity, tickLower, tickUpper, }: PositionListItemProps): JSX.Element;
+export default function PositionListItem({ token0: token0Address, token1: token1Address, tokenId, fee: feeAmount, liquidity, tickLower, tickUpper, onOpen, onDelete, }: PositionListItemProps): JSX.Element;
 export {};

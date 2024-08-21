@@ -1,7 +1,7 @@
-import { BigNumber } from "@ethersproject/bignumber";
-import JSBI from "jsbi";
-type TokenId = number | JSBI | BigNumber;
-type UsePositionTokenURIResult = {
+import { BigNumber } from '@ethersproject/bignumber';
+import JSBI from 'jsbi';
+declare type TokenId = number | JSBI | BigNumber;
+declare type UsePositionTokenURIResult = {
     valid: true;
     loading: false;
     result: {

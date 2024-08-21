@@ -5,8 +5,3 @@ export declare function toReadableError(errorText: string, error: unknown): Erro
 export declare class WrongChainError extends Error {
     constructor();
 }
-export declare class SignatureExpiredError extends Error {
-    private _id;
-    constructor();
-    get id(): string;
-}

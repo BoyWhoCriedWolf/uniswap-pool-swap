@@ -1,6 +1,6 @@
-import { Currency, Token } from "@uniswap/sdk-core";
-import { Tags, TokenInfo, TokenList } from "@uniswap/token-lists";
-type TagDetails = Tags[keyof Tags];
+import { Currency, Token } from '@uniswap/sdk-core';
+import { Tags, TokenInfo, TokenList } from '@uniswap/token-lists';
+declare type TagDetails = Tags[keyof Tags];
 interface TagInfo extends TagDetails {
     id: string;
 }
@@ -12,8 +12,8 @@ export declare class WrappedTokenInfo implements Token {
     readonly isToken: true;
     readonly list?: TokenList;
     readonly tokenInfo: TokenInfo;
-    private _checksummedAddress;
     constructor(tokenInfo: TokenInfo, list?: TokenList);
+    private _checksummedAddress;
     get address(): string;
     get chainId(): number;
     get decimals(): number;

@@ -2,5 +2,5 @@
 interface OwnershipWarningProps {
     ownerAddress: string;
 }
-declare const OwnershipWarning: ({ ownerAddress }: OwnershipWarningProps) => JSX.Element;
+declare function OwnershipWarning({ ownerAddress }: OwnershipWarningProps): JSX.Element;
 export default OwnershipWarning;

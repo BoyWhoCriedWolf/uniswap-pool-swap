@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import { DefaultTheme } from "styled-components";
+import { DefaultTheme } from 'styled-components';
 export declare enum BadgeVariant {
     DEFAULT = "DEFAULT",
     NEGATIVE = "NEGATIVE",

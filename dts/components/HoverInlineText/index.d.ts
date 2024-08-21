@@ -1,11 +1,11 @@
 /// <reference types="react" />
-declare const HoverInlineText: ({ text, maxCharacters, margin, adjustSize, fontSize, textColor, link, ...rest }: {
-    text?: string | undefined;
-    maxCharacters?: number | undefined;
-    margin?: boolean | undefined;
-    adjustSize?: boolean | undefined;
-    fontSize?: string | undefined;
-    textColor?: string | undefined;
-    link?: boolean | undefined;
-}) => JSX.Element;
+declare function HoverInlineText({ text, maxCharacters, margin, adjustSize, fontSize, textColor, link, ...rest }: {
+    text?: string;
+    maxCharacters?: number;
+    margin?: boolean;
+    adjustSize?: boolean;
+    fontSize?: string;
+    textColor?: string;
+    link?: boolean;
+}): JSX.Element;
 export default HoverInlineText;

@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 /**
  * The value here must match the value in the statsig dashboard, if you plan to use statsig.
  */
